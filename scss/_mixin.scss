@@ -1,0 +1,71 @@
+// GRID VARIABLE
+$columns: 12;
+
+//MEDIA QUERIES BREAKPOINT
+
+$xl_scr: 1200px;
+$lg_scr: 992px;
+$md_scr: 768px;
+$sm_scr: 576px;
+
+// Font-size
+$lg_font: 4rem;
+$md_font: 1.7rem;
+$sm_font: 1.5rem;
+$xs_font: .8rem;
+
+
+// Font-Family
+
+$primary_font : 'latoregular', sans-serif;
+$secondary_font : 'alex_brushregular', cursive;
+
+// Color
+$dark_color: #1d1d1d;
+$gray_color: #757575;
+$white_color: #ffffff;
+$violet_color: #5f01d4;
+$darkviolet_color: #180233;
+$yellow_color: #f1c608;
+
+
+
+// Media Query Content
+@mixin media_query ($scr_size) {
+    @media screen and (max-width:$scr_size) {
+        @content;
+    }
+}
+
+// CENTER ALL CONTENT HORIZONTAL AND VERTICAL
+@mixin center_all(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // ADD HEIGHT TO WORK!!!
+}
+
+
+@mixin bg_parallax() {
+    background-color:$dark_color;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // ADD HEIGHT AND IMAGE URL!
+}
+
+// EXTENSION
+.btn {
+    font-size: 1.3rem;
+    padding: 12px 18px;
+    border-radius: 5px;
+    transition: .3s ease;
+    color: $white_color;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px auto;
+    font-weight: 500;
+    
+}
+

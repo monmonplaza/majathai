@@ -1,0 +1,74 @@
+// Column class properties is used for the Grid system
+%column-style {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* CONTAINERS PROPERTY */
+.container, .container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+
+/*******************************/  
+// DEVICE DIMENSION         
+// Small Device        : 576px
+// Medium Device       : 720px
+// Large Device        : 992px
+// Extra Large Device  : 1200px
+/*******************************/
+
+/* CONTAINER BREAKPOINTS */
+$breakpoint: (576:540, 768:720, 992:960, 1200:1140);
+
+@each $min_width, $max_width in $breakpoint {
+    @media (min-width: $min_width + px) {
+      .container{  
+        max-width: $max_width + px;
+        } 
+    }
+}
+
+/* LOOPING COL EXTENTED PROPERTIES  AND  LOOPING GRID MEDIA QUERIES */ 
+$size-list: sm md lg xl;
+@each $size in $size-list {
+    @for $i from 1 through $columns {
+        .col-#{$size}-#{$i} { @extend %column-style }
+    }
+}
+$map: (xl:1200, lg:992, md:768, sm:576);
+@each $prefix, $size in $map {
+    @media all and (min-width: $size + px) {
+        @for $i from 1 through $columns {
+            .col-#{$prefix}-#{$i} { 
+                flex: 0 0 100% / $columns * $i;
+                max-width: 100% / $columns * $i;
+            }
+        }        
+    }
+}
+
+
+/* LOOPING FOR COLUMN GRID OFFSET*/
+ 
+// @each $prefix, $size in $map {
+//     @for $i from 1 through $columns {
+//         .offset-#{$prefix}-#{$i} {
+//             margin-left : 100% / $columns * $i;
+//         }
+//     }
+// }

@@ -3,16 +3,22 @@ $columns: 12;
 
 //MEDIA QUERIES BREAKPOINT
 
-$xl_scr: 1200px;
-$lg_scr: 992px;
+// $xl_scr: 1200px;
+// $lg_scr: 992px;
+// $md_scr: 768px;
+// $sm_scr: 576px;
+
+$xl_scr: 1600px;
+$lg_scr: 1020px;
 $md_scr: 768px;
-$sm_scr: 576px;
+$sm_scr: 850px;
+$xs_scr: 470px;
 
 // Font-size
 $lg_font: 4rem;
 $md_font: 1.7rem;
 $sm_font: 1.5rem;
-$xs_font: .8rem;
+$xs_font: 1rem;
 
 
 // Font-Family

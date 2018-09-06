@@ -24,7 +24,7 @@ $xs_font: 1rem;
 // Font-Family
 
 $primary_font : 'latoregular', sans-serif;
-$secondary_font : 'alex_brushregular', cursive;
+$secondary_font : 'chalifor_dalsatic_vektorRg', cursive;
 
 // Color
 $dark_color: #1d1d1d;
@@ -75,3 +75,8 @@ $yellow_color: #f1c608;
     
 }
 
+@mixin slide-bg {
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+} 

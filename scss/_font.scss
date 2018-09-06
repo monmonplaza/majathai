@@ -8,13 +8,66 @@
 }
 
 @font-face {
+    font-family: 'chalifor_dalsatic_vektorRg';
+    src: url('../font/chalifor_dalsatic-webfont.woff2') format('woff2'),
+         url('../font/chalifor_dalsatic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
     font-family: 'latoregular';
     src: url('../font/lato-regular-webfont.woff2') format('woff2'),
+         url('../font/lato-regular-webfont.woff') format('woff'),
          url('../font/lato-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
+
+
+@font-face {
+    font-family: 'latoblack';
+    src: url('../font/lato-black-webfont.woff2') format('woff2'),
+         url('../font/lato-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'latohairline';
+    src: url('../font/lato-hairline-webfont.woff2') format('woff2'),
+         url('../font/lato-hairline-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'latolight';
+    src: url('../font/lato-light-webfont.woff2') format('woff2'),
+         url('../font/lato-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latothin';
+    src: url('../font/lato-thin-webfont.woff2') format('woff2'),
+         url('../font/lato-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
 
 @font-face {
     font-family: 'fontawesomeregular';
@@ -36,5 +89,7 @@
     font-style: normal;
 
 }
+
+
 
 

@@ -1,6 +1,6 @@
 body {
     // font-size: calc($min_font + ($max_font - $min_font) * ((100vw - $min_viewport) / ($max_viewport - $min_viewport)));   <--- FORMULA FOR FLUID TEXT
-    font-size: 1.3rem;
+    font-size: 16px;
     line-height: 1.2;
     font-family: $primary_font;
     color:$dark_color;
@@ -30,24 +30,43 @@ $header_font_size: (1:2.5, 2:2, 3:1.75, 4:1.5, 5:1.25, 6:1);
     }
 }
 
+body {
+    font-family: 'lato';
+    font-size: 18px;
+}
 
+section {
+    min-height: 100vh;
+    @include media-query($md_scr){
+        min-height: auto;
+    }
+
+}
 
 .wrapper {
-    padding: 80px 0;
+    padding: 130px 0;
 }
 
 .no-padding {
     padding: 0;
 }
 
+.border-white {
+    border: 2px solid #fff;
+}
+
 p {
-    margin-top: 0; 
-    margin-bottom: 1.5rem;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 .img-fluid {
     width: 100%; 
     height: auto;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
 }
 .text-center {
     text-align: center;
@@ -90,4 +109,21 @@ p {
 
 .color-dark {
     color: $dark_color;
+}
+
+.section-title {
+    font-family: $secondary_font;
+    font-size: 4rem;
+}
+
+.section-subtitle {
+    font-size: 1.5rem;
+    padding-bottom: 40px;
+    width: 60%;
+    margin: 0 auto;
+    @include media-query($md_scr){
+        width: 90%;
+        font-size: 1rem;
+    }
+    
 }
